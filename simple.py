@@ -80,7 +80,8 @@ class Post(db.Model):
         if created_at:
             self.created_at = created_at
             self.updated_at = created_at
-
+            
+            
     __tablename__ = "posts"
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
@@ -128,8 +129,8 @@ def requires_authentication(func):
     def _auth_decorator(*args, **kwargs):
         """ does the wrapping """
         if not is_admin():
-            return Response("Could not authenticate you", 
-                            401, 
+            return Response("Could not authenticate you",
+                            401,
                             {"WWW-Authenticate": 'Basic realm="Login Required"'})
         return func(*args, **kwargs)
 
@@ -330,6 +331,9 @@ def uploaded_file(filename):
     )
     return resp
 
+@app.route("/about")
+def about():
+  return render_template("about.html", now=datetime.datetime.now())
 
 @app.route("/posts.rss")
 def feed():

@@ -121,22 +121,7 @@ a2a_config.onclick = 1;
             <div class="span8">
                 <div class="row-fluid">
                     <div class="span12">
-                        <time>
-                            {% if post %}
-                                Posted {{ post.created_at.strftime('%B %d, %Y') }}
-                                {% if post.created_at.strftime('%B %d, %Y') != post.updated_at.strftime('%B %d, %Y') %}
-                                    , Updated {{ post.updated_at.strftime('%B %d, %Y') }}
-                                {% endif %}
-                            {% else %}
-                                <div class="visible-phone">
-                                    <h3><a href="{{ url_for('index') }}">{{ config.BLOG_TITLE }}</a></h3>
-                                    <span>{{ config.BLOG_TAGLINE }}</span>
-                                </div>
-                                <div class="hidden-phone">
-                                    {{ now.strftime('%B %d, %Y') }}
-                                </div>
-                            {% endif %}
-                        </time>
+                      
                     </div>
                 </div>
 
