@@ -335,6 +335,19 @@ def uploaded_file(filename):
 def about():
   return render_template("about.html", now=datetime.datetime.now())
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+@app.route("/canyons")
+def canyons():
+  return render_template("canyons.html", now=datetime.datetime.now())
+=======
+@app.route("/canyonsresort")
+def canyonsresort():
+  return render_template("canyonsresort.html", now=datetime.datetime.now())
+>>>>>>> 48309223ebe6712702228af2272840af9130c710
+
+>>>>>>> eebd5daf62c1f3aae075a7054ac954e422c08650
 @app.route("/parkcity")
 def parkcity():
   return render_template("parkcity.html", now=datetime.datetime.now())
