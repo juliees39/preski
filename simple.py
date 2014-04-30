@@ -339,6 +339,11 @@ def about():
 def canyonsresort():
   return render_template("canyonsresort.html", now=datetime.datetime.now())
 
+@app.route("/parkcity")
+def parkcity():
+  return render_template("parkcity.html", now=datetime.datetime.now())
+
+
 @app.route("/posts.rss")
 def feed():
     rendered = cache.get("rss_feed")
