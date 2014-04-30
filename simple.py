@@ -343,6 +343,11 @@ def parkcity():
 def canyons():
   return render_template("canyons.html", now=datetime.datetime.now())
 
+@app.route("/deervalley")
+def deervalley():
+  return render_template("dearvalley.html", now=datetime.datetime.now())
+
+
 
 
 @app.route("/posts.rss")
