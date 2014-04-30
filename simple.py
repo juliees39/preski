@@ -335,9 +335,9 @@ def uploaded_file(filename):
 def about():
   return render_template("about.html", now=datetime.datetime.now())
 
-@app.route("/canyonsresort")
-def canyonsresort():
-  return render_template("canyonsresort.html", now=datetime.datetime.now())
+@app.route("/canyons")
+def canyons():
+  return render_template("canyons.html", now=datetime.datetime.now())
 
 @app.route("/parkcity")
 def parkcity():
